@@ -1,0 +1,49 @@
+{
+  "name": "revery-quick-start",
+  "version": "1.3.0",
+  "description": "Revery quickstart",
+  "license": "MIT",
+  "esy": {
+    "build": "refmterr dune build -p App",
+    "buildsInSource": "_build"
+  },
+  "scripts": {
+    "format": "esy dune build @fmt --auto-promote",
+    "start": "esy x App"
+  },
+  "revery-packager": {
+    "bundleName": "App",
+    "bundleId": "com.example.app",
+    "displayName": "Revery App",
+    "mainExecutable": "App",
+    "windows": { "packages": ["zip"], "iconFile": "assets/icon.ico" },
+    "darwin": {
+      "packages": ["tar", "dmg"],
+      "iconFile": "assets/icon.icns"
+    },
+    "linux": { "packages": ["tar", "appimage"] }
+  },
+  "dependencies": {
+    "@opam/dune": "1.11.1",
+    "@opam/ppx_deriving_yojson": "3.5.1",
+    "@opam/reason": "3.5.0",
+    "@opam/yojson": "1.7.0",
+    "fetch-native-lwt": "github:lessp/reason-fetch:fetch-native-lwt.json#2ab61bf",
+    "ocaml": "~4.7.0",
+    "revery": "*"
+  },
+  "devDependencies": {
+    "ocaml": "~4.7.0",
+    "@opam/merlin": "*",
+    "esy-macdylibbundler": "*"
+  },
+  "resolutions": {
+    "@opam/httpaf-lwt-unix": "anmonteiro/httpaf:httpaf-lwt-unix.opam#76b461bed081c64908fb1fdfa076ab2c936ca622",
+    "@opam/httpaf-lwt": "anmonteiro/httpaf:httpaf-lwt.opam#76b461bed081c64908fb1fdfa076ab2c936ca622",
+    "@opam/httpaf": "anmonteiro/httpaf:httpaf.opam#76b461bed081c64908fb1fdfa076ab2c936ca622",
+    "revery": "link:../revery/package.json",
+    "pesy": "0.4.1",
+    "@opam/merlin-extend": "0.4"
+  }
+}
+

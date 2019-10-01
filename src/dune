@@ -1,0 +1,13 @@
+(executable
+    (name App)
+    (package App)
+    (public_name App)
+    (preprocess (pps ppx_deriving_yojson))
+    (libraries
+        bigarray
+        Revery
+        Revery.lwt
+        fetch-native-lwt
+        yojson 
+        ppx_deriving_yojson.runtime
+            ))
