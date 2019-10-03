@@ -36,7 +36,7 @@ let createElement =
       Hooks.effect(
         If((!==), catCount),
         () => {
-          fetchNewCat();
+          fetchNewCat() |> ignore;
 
           None;
         },
@@ -47,7 +47,7 @@ let createElement =
       Hooks.effect(
         OnMount,
         () => {
-          fetchNewCat();
+          fetchNewCat() |> ignore;
 
           None;
         },

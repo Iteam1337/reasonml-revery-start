@@ -30,7 +30,7 @@
     "@opam/yojson": "1.7.0",
     "fetch-native-lwt": "github:lessp/reason-fetch:fetch-native-lwt.json#2ab61bf",
     "ocaml": "~4.7.0",
-    "revery": "*"
+    "revery": "github:lessp/revery:package.json#7e3f315"
   },
   "devDependencies": {
     "ocaml": "~4.7.0",
@@ -41,7 +41,6 @@
     "@opam/httpaf-lwt-unix": "anmonteiro/httpaf:httpaf-lwt-unix.opam#76b461bed081c64908fb1fdfa076ab2c936ca622",
     "@opam/httpaf-lwt": "anmonteiro/httpaf:httpaf-lwt.opam#76b461bed081c64908fb1fdfa076ab2c936ca622",
     "@opam/httpaf": "anmonteiro/httpaf:httpaf.opam#76b461bed081c64908fb1fdfa076ab2c936ca622",
-    "revery": "link:../revery/package.json",
     "pesy": "0.4.1",
     "@opam/merlin-extend": "0.4"
   }
